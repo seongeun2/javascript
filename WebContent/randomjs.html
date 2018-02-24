@@ -61,8 +61,19 @@
 		}
 		//움직입니다.
 		setInterval(function(){
-			for(var i in movingTexts){ movingTexts[i].move(); }
+			for(var i in movingTexts){
+				movingTexts[i].move();
+				
+				}
 			}, 1000/30);
+		
+		var movingTexts2 = document.getElementsByTagName("h1");
+		for (var i in movingTexts2)
+		{
+			movingTexts2[i].onmouseover = function(){
+				this.remove(); 
+			}
+		}
 		};
 </script>
 </head>
